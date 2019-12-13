@@ -1,0 +1,2 @@
+# stouza.ru
+Landing page
