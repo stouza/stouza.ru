@@ -1,4 +1,5 @@
-#include <atomic>
+#include "index.h"
+
 #include <cmath>
 #include <cstdio>
 #include <cstdlib>
@@ -9,7 +10,6 @@
 #include <microhttpd.h>
 #include <pthread.h>
 #include <sstream>
-#include <string>
 #include <unistd.h>
 #include <vector>
 
@@ -22,39 +22,7 @@ using namespace std;
 // loaded and persist in memory during the server lifetime.
 unique_ptr<map<string, vector<unsigned char>*> > www_data;
 
-class IndexPage
-{
-	bool initialized;
-	string html;
-
-public :
-
-	const string& getHtml()
-	{
-		if (initialized) return html;
-
-		if (www_data)
-		{
-			const vector<unsigned char>* content = (*www_data)["index.html"];
-			if (content)
-				html = string(reinterpret_cast<const char*>(&(*content)[0]), content->size());
-		}
-		
-		// TODO Use regex
-		string gitSHA1 = GIT_SHA1;
-		string placeholder = "__VERSION_NUMBER__";
-		auto found = html.find(placeholder);
-		if (found != string::npos)
-			html.replace(found, placeholder.length(), gitSHA1);
-		
-		initialized = true;
-		return html;
-	}
-
-	IndexPage() : initialized(false) { }
-};
-
-static IndexPage indexPage;
+static Index indexPage;
 
 class Post
 {

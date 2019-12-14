@@ -40,6 +40,7 @@ include(GetGitRevisionDescription)
 get_git_head_revision(GIT_REFSPEC GIT_SHA1)
 
 add_executable(${PROJECT_NAME} ${SRCS})
+target_include_directories(${PROJECT_NAME} PRIVATE include)
 target_compile_definitions(${PROJECT_NAME} PUBLIC GIT_SHA1="${GIT_SHA1}")
 target_link_libraries(${PROJECT_NAME} ${Thread_LIBRARIES} ${MHD_LIBRARIES})
 
