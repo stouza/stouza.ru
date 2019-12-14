@@ -63,16 +63,9 @@
     </div>
 
     <div class="h-c-header__lockup">
-      <div class="h-c-header__company-logo">
-        <div
-            class="h-c-header__company-logo-link" title="Google">
-          <img src="logo-gmail.png" class="header-logo-gmail">
-        </div>
-      </div>
-
       <div class="h-c-header__product-logo">
         <div class="h-c-header__product-logo-link">
-          <span class="h-c-header__product-logo-text">Gmail</span>
+          <span class="h-c-header__product-logo-text">Я Стою За</span>
         </div>
       </div>
 
@@ -114,7 +107,7 @@
               ga-event-category="ab experiment"
               ga-event-action="create account"
               ga-event-label="nav">
-              Get Gmail
+              Скачать приложение
           </a>
         </li>
       </ul>
@@ -131,7 +124,7 @@
               ga-event-category="ab experiment"
               ga-event-action="for work"
               ga-event-label="nav">
-            For Work
+            Зарегистрировать проект
           </a>
         </li>
         <li class="h-c-header__cta-li g-mail-nav-links--mobile  link--last" aria-level="1">
@@ -142,7 +135,7 @@
               ga-event-category="ab experiment"
               ga-event-action="sign in"
               ga-event-label="nav">
-            Sign in
+            Вход для волонтёров
           </a>
         </li>
       </ul>
@@ -300,15 +293,9 @@
     <div class="h-c-header__drawer-content">
       <div class="h-c-header__drawer-bar">
         <div class="h-c-header__drawer-lockup">
-          <div class="h-c-header__drawer-company-logo">
-            <div class="h-c-header__drawer-company-logo-link" title="Google">
-              <img src="logo-gmail.png" class="header-logo-gmail">
-            </div>
-          </div>
-
           <div class="h-c-header__drawer-product-logo">
             <div class="h-c-header__drawer-product-logo-link">
-              <span class="h-c-header__drawer-product-logo-text">Gmail</span>
+              <span class="h-c-header__drawer-product-logo-text">Я Стою За</span>
             </div>
           </div>
         </div>
@@ -394,7 +381,7 @@
                       ga-event-category="ab experiment"
                       ga-event-action="create account"
                       ga-event-label="carousel">
-                    Get Gmail
+                    Скачать приложение
                   </a>
                 </div>
 
@@ -462,7 +449,7 @@
                       ga-event-category="ab experiment"
                       ga-event-action="create account"
                       ga-event-label="carousel">
-                    Get Gmail
+                    Скачать приложение
                   </a>
                 </div>
 
@@ -530,7 +517,7 @@
                       ga-event-category="ab experiment"
                       ga-event-action="create account"
                       ga-event-label="carousel">
-                    Get Gmail
+                    Скачать приложение
                   </a>
                 </div>
 
@@ -595,14 +582,14 @@
     <div class="h-c-grid__col h-c-grid__col--12 h-c-grid__col--align-middle">
       <div class="content__cta content__cta--mobile">
         <a class="h-c-button h-c-button--primary hero-carousel__cta"
-            title="Get Gmail"
+            title="Скачать приложение"
             target="_blank"
             data-ng-click="ctrl.handleGetAppClick(false)"
             ga-on="click"
             ga-event-category="ab experiment"
             ga-event-action="create account"
             ga-event-label="hero">
-          Get Gmail
+          Скачать приложение
         </a>
       </div>
     </div>
@@ -618,7 +605,7 @@
     <div class="h-c-grid">
       <div class="h-c-grid__col h-c-grid__col--12 h-c-grid__col--align-middle">
         <div class="copy-content">
-          <h2 class="h-c-headline h-c-headline--two">Лучше чем банковские переводы</h2>
+          <h2 class="h-c-headline h-c-headline--two">Банковские переводы больше не нужны</h2>
 
           <div class="content__text">
             <p class="h-c-copy">Финансируйте проекты напрямую через приложение.</p>
