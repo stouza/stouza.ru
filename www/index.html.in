@@ -181,18 +181,10 @@
     </div>
 
     <div class="h-c-header__lockup">
-      <div class="h-c-header__company-logo">
-        <div
-            class="h-c-header__company-logo-link" title="Google">
-
-          <img src="logo-gmail.png" class="header-logo-gmail">
-        </div>
-      </div>
-
       <div class="h-c-header__product-logo">
         <div
             class="h-c-header__product-logo-link">
-          <span class="h-c-header__product-logo-text">Gmail</span>
+          <span class="h-c-header__product-logo-text">Я Стою За</span>
         </div>
       </div>
 
@@ -686,99 +678,6 @@
       </li>
     </ul>
 
-    <ul class="h-c-footer__global-links h-c-footer__global-links--extra h-no-bullet">
-      <li class="h-c-footer__global-links-list-item h-c-footer__global-links-list-item--extra">
-        <a class="h-c-footer__link" href="https://support.google.com/mail/?hl=en#topic=7065107" target="_blank">
-          <svg role="img" class="h-c-icon h-c-icon--24px h-c-icon--footer">
-            <use xlink:href="#mi-help">
-          </svg>
-          Help
-        </a>
-      </li>
-
-      <li class="h-c-footer__global-links-list-item
-      h-c-footer__global-links-list-item--extra">
-        <label for="lang-selector" class="h-u-visually-hidden">
-          Change language or region
-        </label>
-        <select name="lang-selector" id="lang-selector" class="h-c-form__dropdown h-c-footer__lang-dropdown">
-              <option value="/intl/az/gmail/about/" >Azərbaycan Dili</option>
-              <option value="/intl/ms/gmail/about/" >Bahasa Melayu</option>
-              <option value="/intl/ca/gmail/about/" >Català</option>
-              <option value="/intl/da/gmail/about/" >Dansk</option>
-              <option value="/intl/de/gmail/about/" >Deutsch</option>
-              <option value="/intl/et/gmail/about/" >Eesti</option>
-              <option value="/gmail/about/" selected>English</option>
-              <option value="/intl/en_in/gmail/about/" >English (India)</option>
-              <option value="/intl/en_uk/gmail/about/" >English (United Kingdom)</option>
-              <option value="/intl/es/gmail/about/" >Español</option>
-              <option value="/intl/es-419/gmail/about/" >Español (Latinoamérica)</option>
-              <option value="/intl/eu/gmail/about/" >Euskara</option>
-              <option value="/intl/fil/gmail/about/" >Filipino</option>
-              <option value="/intl/fr/gmail/about/" >Français</option>
-              <option value="/intl/gl/gmail/about/" >Galego</option>
-              <option value="/intl/hr/gmail/about/" >Hrvatski</option>
-              <option value="/intl/id/gmail/about/" >Indonesia</option>
-              <option value="/intl/it/gmail/about/" >Italiano</option>
-              <option value="/intl/sw/gmail/about/" >Kiswahili</option>
-              <option value="/intl/lv/gmail/about/" >Latviešu</option>
-              <option value="/intl/lt/gmail/about/" >Lietuvių</option>
-              <option value="/intl/hu/gmail/about/" >Magyar</option>
-              <option value="/intl/nl/gmail/about/" >Nederlands</option>
-              <option value="/intl/no/gmail/about/" >Norsk Bokmål (Norge)</option>
-              <option value="/intl/pl/gmail/about/" >Polski</option>
-              <option value="/intl/pt-BR/gmail/about/" >Português (Brasil)</option>
-              <option value="/intl/pt-PT/gmail/about/" >Português (Portugal)</option>
-              <option value="/intl/ro/gmail/about/" >Română</option>
-              <option value="/intl/sk/gmail/about/" >Slovenčina</option>
-              <option value="/intl/sl/gmail/about/" >Slovenščina</option>
-              <option value="/intl/fi/gmail/about/" >Suomi</option>
-              <option value="/intl/sv/gmail/about/" >Svenska</option>
-              <option value="/intl/vi/gmail/about/" >Tiếng Việt</option>
-              <option value="/intl/tr/gmail/about/" >Türkçe</option>
-              <option value="/intl/is/gmail/about/" >Íslenska</option>
-              <option value="/intl/cs/gmail/about/" >Čeština</option>
-              <option value="/intl/el/gmail/about/" >Ελληνικά</option>
-              <option value="/intl/bg/gmail/about/" >Български</option>
-              <option value="/intl/ru/gmail/about/" >Русский</option>
-              <option value="/intl/sr/gmail/about/" >Српски</option>
-              <option value="/intl/uk/gmail/about/" >Українська</option>
-              <option value="/intl/iw/gmail/about/" >עברית (ישראל)</option>
-              <option value="/intl/ur/gmail/about/" >اردو</option>
-              <option value="/intl/ar/gmail/about/" >العربية</option>
-              <option value="/intl/fa/gmail/about/" >فارسی</option>
-              <option value="/intl/mr/gmail/about/" >मराठी</option>
-              <option value="/intl/hi/gmail/about/" >हिन्दी</option>
-              <option value="/intl/bn/gmail/about/" >বাংলা</option>
-              <option value="/intl/gu/gmail/about/" >ગુજરાતી</option>
-              <option value="/intl/ta/gmail/about/" >தமிழ்</option>
-              <option value="/intl/te/gmail/about/" >తెలుగు</option>
-              <option value="/intl/kn/gmail/about/" >ಕನ್ನಡ</option>
-              <option value="/intl/ml/gmail/about/" >മലയാളം</option>
-              <option value="/intl/th/gmail/about/" >ไทย</option>
-              <option value="/intl/my/gmail/about/" >ဗမာ</option>
-              <option value="/intl/am/gmail/about/" >አማርኛ</option>
-              <option value="/intl/km/gmail/about/" >ខ្មែរ</option>
-              <option value="/intl/zh-CN_cn/gmail/about/" >中文 (简体, 中国)</option>
-              <option value="/intl/zh-TW_tw/gmail/about/" >中文 (繁體, 台灣)</option>
-              <option value="/intl/zh-HK_hk/gmail/about/" >中文 (繁體字, 中華人民共和國香港特別行政區)</option>
-              <option value="/intl/ja/gmail/about/" >日本語</option>
-              <option value="/intl/ko/gmail/about/" >한국어</option>
-        </select>
-        <script nonce="QrkLfgARUfdcbczSFRzIxw">
-          (function() {
-            var el = document.getElementById('lang-selector');
-            el.addEventListener('change', function() {
-              var href = el[this.selectedIndex].value;
-              if (href != '') {
-                window.location.href = href;
-              };
-            });
-          }())
-        </script>
-      </li>
-
-    </ul>
   </section>
 </footer>
 
