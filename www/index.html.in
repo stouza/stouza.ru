@@ -219,37 +219,37 @@
       <ul class="h-c-header__cta-list header__nav--ltr">
         <li class="h-c-header__nav-li g-mail-nav-links"
             aria-level="1">
-          <a href="https://gsuite.google.com/products/gmail/?utm_source=gmailforwork&amp;utm_medium=et&amp;utm_campaign=global-xsell-website-ft-gmail_for_work_gsuitelink&amp;utm_content=forwork"
+          <a href=""
               class="h-c-header__nav-li-link "
               target="_blank"
               ga-on="click"
               ga-event-category="ab experiment"
               ga-event-action="for work"
               ga-event-label="nav">
-            For Work
+            Зарегистрировать проект
           </a>
         </li>
         <li class="h-c-header__nav-li g-mail-nav-links"
             aria-level="1">
-          <a href="https://accounts.google.com/AccountChooser?service=mail&amp;continue=https://mail.google.com/mail/"
+          <a href=""
               class="h-c-header__nav-li-link "
               target="_blank"
               ga-on="click"
               ga-event-category="ab experiment"
               ga-event-action="sign in"
               ga-event-label="nav">
-            Sign in
+            Вход для волонтёров
           </a>
         </li>
         <li class="h-c-header__cta-li h-c-header__cta-li--primary">
-          <a href="https://accounts.google.com/SignUp?service=mail&amp;continue=https://mail.google.com/mail/?pc=topnav-about-n-en"
+          <a href=""
               class="h-c-button h-c-header__cta-li-link h-c-header__cta-li-link--primary"
               target="_blank"
               ga-on="click"
               ga-event-category="ab experiment"
               ga-event-action="create account"
               ga-event-label="nav">
-              Create an account
+              Скачать приложение
           </a>
         </li>
       </ul>
@@ -262,7 +262,7 @@
               ga-event-category="ab experiment"
               ga-event-action="create account"
               ga-event-label="nav">
-              Create an account
+              Скачать приложение
           </a>
         </li>
         <li class="h-c-header__nav-li g-mail-nav-links"
@@ -369,11 +369,11 @@
               <div class="item__content">
 
                 <div class="content__title">
-                  <h1 class="h-c-headline h-c-headline--one hero-carousel__headline">Get more done with Gmail</h1>
+                  <h1 class="h-c-headline h-c-headline--one hero-carousel__headline">Прямая демократия</h1>
                 </div>
 
                 <div class="content__copy">
-                  <p class="h-c-copy hero-carousel__copy">Now more secure, smarter and easier to use—helping you save time and do more with your inbox.</p>
+                  <p class="h-c-copy hero-carousel__copy">Решайте на что расходовать деньги в Вашем районе, городе, в России, без бюджетной неэффективности, коррупции и воровства.</p>
                 </div>
 
                 <div class="content__cta content__cta--desktop">
@@ -384,7 +384,7 @@
                       ga-event-category="ab experiment"
                       ga-event-action="create account"
                       ga-event-label="hero">
-                    Create an account
+                    Скачать приложение
                   </a>
                   <a class="h-c-button h-c-button--primary hero-carousel__cta hero-carousel__cta--alt"
                       title="Create an account"
@@ -437,11 +437,11 @@
               <div class="item__content">
 
                 <div class="content__title">
-                  <h1 class="h-c-headline h-c-headline--one hero-carousel__headline">Write emails faster</h1>
+                  <h1 class="h-c-headline h-c-headline--one hero-carousel__headline">Без посредников и блокировок</h1>
                 </div>
 
                 <div class="content__copy">
-                  <p class="h-c-copy hero-carousel__copy">Get suggestions as you type. Simply <span class="text--desktop">hit tab</span><span class="text--mobile">swipe right</span> to accept and you're done.</p>
+                  <p class="h-c-copy hero-carousel__copy">Вы помогаете оплачивать расходы напрямую, минуя переводы средств на общий расчётный счёт. Работа волонтёров защищена от политически мотивированных блокировок.</p>
                 </div>
 
                 <div class="content__cta content__cta--desktop">
@@ -452,7 +452,7 @@
                       ga-event-category="ab experiment"
                       ga-event-action="create account"
                       ga-event-label="hero">
-                    Create an account
+                    Скачать приложение
                   </a>
                   <a class="h-c-button h-c-button--primary hero-carousel__cta hero-carousel__cta--alt"
                       title="Create an account"
@@ -505,11 +505,11 @@
               <div class="item__content">
 
                 <div class="content__title">
-                  <h1 class="h-c-headline h-c-headline--one hero-carousel__headline">A faster way  to reply</h1>
+                  <h1 class="h-c-headline h-c-headline--one hero-carousel__headline">Доверие и прозрачность</h1>
                 </div>
 
                 <div class="content__copy">
-                  <p class="h-c-copy hero-carousel__copy">Respond to emails faster with pre-suggested responses that sound just like you.</p>
+                  <p class="h-c-copy hero-carousel__copy">Установите месячный бюджет Вашей поддержки и получайте отчёты о расходовании средств.</p>
                 </div>
 
                 <div class="content__cta content__cta--desktop">
@@ -520,7 +520,7 @@
                       ga-event-category="ab experiment"
                       ga-event-action="create account"
                       ga-event-label="hero">
-                    Create an account
+                    Скачать приложение
                   </a>
                   <a class="h-c-button h-c-button--primary hero-carousel__cta hero-carousel__cta--alt"
                       title="Create an account"
@@ -618,10 +618,10 @@
     <div class="h-c-grid">
       <div class="h-c-grid__col h-c-grid__col--12 h-c-grid__col--align-middle">
         <div class="copy-content">
-          <h2 class="h-c-headline h-c-headline--two">Experience Gmail on any device</h2>
+          <h2 class="h-c-headline h-c-headline--two">Лучше чем банковские переводы</h2>
 
           <div class="content__text">
-            <p class="h-c-copy">The ease & simplicity of Gmail, wherever you are.</p>
+            <p class="h-c-copy">Финансируйте проекты напрямую через приложение.</p>
           </div>
 
         </div>
