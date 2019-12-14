@@ -356,7 +356,7 @@
               <div class="item__content">
 
                 <div class="content__title">
-                  <h1 class="h-c-headline h-c-headline--one hero-carousel__headline">Прямая демократия</h1>
+                  <h1 class="h-c-headline h-c-headline--one hero-carousel__headline">Прямую демократию</h1>
                 </div>
 
                 <div class="content__copy">
@@ -424,11 +424,11 @@
               <div class="item__content">
 
                 <div class="content__title">
-                  <h1 class="h-c-headline h-c-headline--one hero-carousel__headline">Без посредников и блокировок</h1>
+                  <h1 class="h-c-headline h-c-headline--one hero-carousel__headline">Свободу от политических блокировок</h1>
                 </div>
 
                 <div class="content__copy">
-                  <p class="h-c-copy hero-carousel__copy">Вы помогаете оплачивать расходы напрямую, минуя переводы средств на общий расчётный счёт. Работа волонтёров защищена от политически мотивированных блокировок.</p>
+                  <p class="h-c-copy hero-carousel__copy">Вы помогаете оплачивать расходы напрямую, минуя переводы средств на общий расчётный счёт. Работа волонтёров защищена от финансового давления властей.</p>
                 </div>
 
                 <div class="content__cta content__cta--desktop">
@@ -605,7 +605,7 @@
     <div class="h-c-grid">
       <div class="h-c-grid__col h-c-grid__col--12 h-c-grid__col--align-middle">
         <div class="copy-content">
-          <h2 class="h-c-headline h-c-headline--two">Банковские переводы больше не нужны</h2>
+          <h2 class="h-c-headline h-c-headline--two">Россия Будущего — это мы</h2>
 
           <div class="content__text">
             <p class="h-c-copy">Финансируйте проекты напрямую через приложение.</p>
