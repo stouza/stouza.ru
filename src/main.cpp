@@ -2,6 +2,7 @@
 #include "sslkeys.h"
 
 #include <cmath>
+#include <climits> // HOST_NAME_MAX
 #include <cstdio>
 #include <cstdlib>
 #include <cstring>
@@ -9,8 +10,8 @@
 #include <map>
 #include <memory>
 #include <microhttpd.h>
-#include <pthread.h>
 #include <sstream>
+#include <thread>
 #include <unistd.h>
 #include <vector>
 
@@ -84,13 +85,17 @@ public :
 };
 
 static int result_404(struct MHD_Connection* connection)
-{
-	static string message_404 = "<html><body><h2>404 Not found</h2></body></html>";
+{	
+	static struct MHD_Response* response = NULL;
 	
-	struct MHD_Response* response = MHD_create_response_from_buffer(
-		message_404.size(), &message_404[0], MHD_RESPMEM_MUST_COPY);
+	if (!response)
+	{
+		static string message_404 = "<html><body><h2>404 Not found</h2></body></html>";
+		response = MHD_create_response_from_buffer(
+			message_404.size(), &message_404[0], MHD_RESPMEM_PERSISTENT);
+	}
+
 	int ret = MHD_queue_response(connection, MHD_HTTP_OK, response);
-	MHD_destroy_response(response);
 
 	return ret;
 }
@@ -186,6 +191,66 @@ static int callback(void* cls, struct MHD_Connection* connection,
     return ret;
 }
 
+static int result_302(void* cls, struct MHD_Connection* connection,
+	const char* curl, const char* method, const char* version,
+	const char* upload_data, size_t* upload_data_size, void** con_cls)
+{	
+	static struct MHD_Response* response = NULL;
+	
+	if (!response)
+	{
+		static string message_302 = "<html><body><h2>302 Found</h2></body></html>";
+		response = MHD_create_response_from_buffer(
+			message_302.size(), &message_302[0], MHD_RESPMEM_PERSISTENT);
+		static char hostname[sizeof("https://") + HOST_NAME_MAX] = "https://";
+		gethostname(hostname + sizeof("https://") - 1, HOST_NAME_MAX + 1);
+		MHD_add_response_header(response, "Location", hostname);
+	}
+
+	int ret = MHD_queue_response(connection, MHD_HTTP_FOUND, response);
+	
+	return ret;
+}
+
+static MHD_Daemon* startHTTPS()
+{
+	static SSLKeys sslKeys;
+
+	// Use SSL.
+	return MHD_start_daemon(
+		MHD_USE_POLL_INTERNAL_THREAD | MHD_USE_SSL, 443, NULL, NULL,
+		&callback, NULL,
+		MHD_OPTION_HTTPS_MEM_KEY, sslKeys.getPrivateKey().c_str(),
+		MHD_OPTION_HTTPS_MEM_CERT, sslKeys.getCertificate().c_str(),
+		MHD_OPTION_NOTIFY_COMPLETED, Post::finalize, NULL,
+		MHD_OPTION_CONNECTION_TIMEOUT, (unsigned int)120,
+		MHD_OPTION_END);
+}
+
+static MHD_Daemon* startHTTP(int port, bool redirectHTTPtoHTTPS = false)
+{
+	MHD_Daemon* daemon = MHD_start_daemon(
+		MHD_USE_POLL_INTERNAL_THREAD, port, NULL, NULL,
+		redirectHTTPtoHTTPS ? &result_302 : &callback, NULL,
+		MHD_OPTION_NOTIFY_COMPLETED, Post::finalize, NULL,
+		MHD_OPTION_CONNECTION_TIMEOUT, (unsigned int)120,
+		MHD_OPTION_END);
+	
+	if (!redirectHTTPtoHTTPS) return daemon;
+
+	if (daemon == NULL)
+	{
+		fprintf(stderr, "Error starting server on port %d, errno = %d\n", port, errno);
+		exit(1);
+	}
+
+	while (1) sleep(1);
+
+	MHD_stop_daemon(daemon);
+	
+	return NULL;
+}
+
 int main(int argc, char* argv[])
 {
 	if (argc != 2)
@@ -196,41 +261,32 @@ int main(int argc, char* argv[])
 	
 	int port = atoi(argv[1]);
 
-	struct MHD_Daemon* daemon;
+	MHD_Daemon* daemon;
 	
-    if (port == 443)
-    {
-		static SSLKeys sslKeys;
+	std::thread httpRedirection;
+	
+	if (port == 443)
+	{
+		daemon = startHTTPS();
 
-		// Use SSL.
-		daemon = MHD_start_daemon(
-			MHD_USE_SELECT_INTERNALLY | MHD_USE_SSL, port, NULL, NULL,
-			&callback, NULL,
-			MHD_OPTION_HTTPS_MEM_KEY, sslKeys.getPrivateKey().c_str(),
-			MHD_OPTION_HTTPS_MEM_CERT, sslKeys.getCertificate().c_str(),
-			MHD_OPTION_NOTIFY_COMPLETED, Post::finalize, NULL,
-			MHD_OPTION_CONNECTION_TIMEOUT, (unsigned int)120,
-			MHD_OPTION_END);
+		// Start HTTP as well, but only for redirection.
+		bool redirectHTTPtoHTTPS = true;
+		httpRedirection = std::thread(startHTTP, 80, true);
 	}
 	else
-	{
-		daemon = MHD_start_daemon(
-			MHD_USE_SELECT_INTERNALLY, port, NULL, NULL,
-			&callback, NULL,
-			MHD_OPTION_NOTIFY_COMPLETED, Post::finalize, NULL,
-			MHD_OPTION_CONNECTION_TIMEOUT, (unsigned int)120,
-			MHD_OPTION_END);
-	}	
-	
+		daemon = startHTTP(port);
+
 	if (daemon == NULL)
 	{
-		fprintf(stderr, "Error starting server with port %d, errno = %d\n", port, errno);
+		fprintf(stderr, "Error starting server on port %d, errno = %d\n", port, errno);
 		return 1;
 	}
 
 	while (1) sleep(1);
 
 	MHD_stop_daemon(daemon);
+
+	httpRedirection.join();
 
 	return 0;
 }
