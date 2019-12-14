@@ -5,7 +5,7 @@
     <meta content="initial-scale=1, minimum-scale=1, width=device-width" name="viewport">
 
     <title>Я Стою За</title>
-    <meta name="description" content="Gmail is available across all your devices Android, iOS, and desktop devices. Sort, collaborate or call a friend without leaving your inbox.&#34;">
+    <meta name="description" content="Решайте на что расходовать деньги в Вашем районе, городе, в России. Эффективно, без коррупции и воровства.&#34;">
 
     <meta name="referrer" content="no-referrer" />
 
@@ -627,19 +627,6 @@
 
             </a>
           </li>
-          <li class="badges__item">
-            <a href="https://itunes.apple.com/app/apple-store/id422689480?pt=9008&amp;ct=web_n_about-badge&amp;mt=8"
-                target="_blank"
-                rel="noopener"
-                ga-on="click"
-                ga-event-category="ab experiment"
-                ga-event-action="mobile app"
-                ga-event-label="app store">
-
-              <img class="badges__badge badges__badge--app" src="https://lh3.googleusercontent.com/OBvpNtOKZRZjGFYGsmUrME8yMIjkk1BNQX89gt_lMN2afWCZDvE4SdZhPGXI72vDo-wWqML-8NDy2vU2zY2c6oOktAXZbcwU9ByMBw" alt="App Store" aria-label="App Store"/>
-
-            </a>
-          </li>
         </ul>
       </div>
     </div>
@@ -704,52 +691,6 @@
 
   <symbol id="mi-chevron" viewBox="0 0 12 8">
     <path d="M10.6,8L6,3.4L1.4,8L0,6.6l6-6l6,6L10.6,8z"></path>
-  </symbol>
-
-  <symbol id="mi-youtube-icon"  viewBox="0 0 86 60">
-    <path d="M83.37 9.387c-.967-3.677-3.87-6.58-7.547-7.597C69.193 0 42.58 0 42.58 0S15.97 0 9.29 1.79c-3.677.968-6.532 3.87-7.548 7.597C0 16.065 0 30 0 30s0 13.935 1.79 20.613c.968 3.677 3.87 6.58 7.55 7.597C15.967 60 42.58 60 42.58 60s26.614 0 33.29-1.79c3.678-.968 6.533-3.87 7.55-7.597C85.16 43.935 85.16 30 85.16 30s0-13.935-1.79-20.613zm-49.5 33.29V17.323L56.13 30 33.87 42.677z" fill-rule="nonzero"></path>
-  </symbol>
-
-  <symbol id="mi-youtube-icon-white">
-    <path d="M83.37 9.387c-.967-3.677-3.87-6.58-7.547-7.597C69.193 0 42.58 0 42.58 0S15.97 0 9.29 1.79c-3.677.968-6.532 3.87-7.548 7.597C0 16.065 0 30 0 30s0 13.935 1.79 20.613c.968 3.677 3.87 6.58 7.55 7.597C15.967 60 42.58 60 42.58 60s26.614 0 33.29-1.79c3.678-.968 6.533-3.87 7.55-7.597C85.16 43.935 85.16 30 85.16 30s0-13.935-1.79-20.613zm-49.5 33.29V17.323L56.13 30 33.87 42.677z" fill-rule="nonzero" fill="#FFF"></path>
-  </symbol>
-
-  <symbol id="mi-youtube-icon-red">
-      <g fill-rule="nonzero" fill="none">
-        <path d="M83.37 9.387c-.967-3.677-3.87-6.58-7.547-7.597C69.193 0 42.58 0 42.58 0S15.97 0 9.29 1.79c-3.677.968-6.532 3.87-7.548 7.597C0 16.065 0 30 0 30s0 13.935 1.79 20.613c.968 3.677 3.87 6.58 7.55 7.597C15.967 60 42.58 60 42.58 60s26.614 0 33.29-1.79c3.678-.968 6.533-3.87 7.55-7.597C85.16 43.935 85.16 30 85.16 30s0-13.935-1.79-20.613z" fill="#F00"></path>
-        <path fill="#FFF" d="M33.87 42.677L56.13 30 33.87 17.323"></path>
-      </g>
-  </symbol>
-
-  <symbol id="mi-youtube-icon-black">
-    <g fill-rule="nonzero" fill="none">
-      <path d="M83.37 9.387c-.967-3.677-3.87-6.58-7.547-7.597C69.193 0 42.58 0 42.58 0S15.97 0 9.29 1.79c-3.677.968-6.532 3.87-7.548 7.597C0 16.065 0 30 0 30s0 13.935 1.79 20.613c.968 3.677 3.87 6.58 7.55 7.597C15.967 60 42.58 60 42.58 60s26.614 0 33.29-1.79c3.678-.968 6.533-3.87 7.55-7.597C85.16 43.935 85.16 30 85.16 30s0-13.935-1.79-20.613z" fill="#282828"></path>
-      <path fill="#FFF" d="M33.87 42.677L56.13 30 33.87 17.323"></path>
-    </g>
-  </symbol>
-
-  <symbol id="mi-pdf-icon" viewBox="0 0 24 24">
-    <path d="M7 11.5h1v-1H7v1zM19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-9.5 8.5c0 .83-.67 1.5-1.5 1.5H7v2H5.5V9H8c.83 0 1.5.67 1.5 1.5v1zm10-1H17v1h1.5V13H17v2h-1.5V9h4v1.5zm-5 3c0 .83-.67 1.5-1.5 1.5h-2.5V9H13c.83 0 1.5.67 1.5 1.5v3zm-2.5 0h1v-3h-1v3z"></path>
-  </symbol>
-
-  <symbol id="mi-arrow-dropdown" viewBox="0 0 24 24">
-    <path d="M7 10l5 5 5-5z"></path>
-  </symbol>
-
-  <symbol id="mi-search" viewBox="0 0 24 22">
-    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
-  </symbol>
-
-  <symbol id="mi-expand" viewBox="0 0 24 24">
-    <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"></path>
-  </symbol>
-
-  <symbol id="mi-mail" viewBox="0 0 24 24">
-    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z"></path>
-  </symbol>
-
-  <symbol id="mi-close" viewBox="0 0 24 24">
-    <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
   </symbol>
 
   <!-- hercules icons -->
