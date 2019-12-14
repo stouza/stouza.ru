@@ -12,7 +12,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="180x180" href="https://storage.googleapis.com/operating-anagram-8280/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://www.gstatic.com/images/branding/product/2x/gmail_32dp.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://www.gstatic.com/images/branding/product/2x/gmail_16dp.png">
-    <link rel="shortcut icon" href="https://www.google.com/gmail/about/static/favicon.ico">
+    <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css?family=Roboto:100,300,400,500,700|Google+Sans:400,500|Product+Sans:400&amp;lang=en" nonce="QrkLfgARUfdcbczSFRzIxw">
 
     <link href="index.min.css" rel="stylesheet" nonce="QrkLfgARUfdcbczSFRzIxw">
@@ -496,7 +496,7 @@
                 </div>
 
                 <div class="content__copy">
-                  <p class="h-c-copy hero-carousel__copy">Установите месячный бюджет Вашей поддержки и получайте отчёты о расходовании средств.</p>
+                  <p class="h-c-copy hero-carousel__copy">Установите ежемесячный бюджет Вашей поддержки и получайте отчёты о расходовании средств.</p>
                 </div>
 
                 <div class="content__cta content__cta--desktop">
@@ -605,7 +605,7 @@
     <div class="h-c-grid">
       <div class="h-c-grid__col h-c-grid__col--12 h-c-grid__col--align-middle">
         <div class="copy-content">
-          <h2 class="h-c-headline h-c-headline--two">Россия Будущего — это мы</h2>
+          <h2 class="h-c-headline h-c-headline--two">Россия будущего — это мы</h2>
 
           <div class="content__text">
             <p class="h-c-copy">Финансируйте проекты напрямую через приложение.</p>

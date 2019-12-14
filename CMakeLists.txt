@@ -32,15 +32,25 @@ include(AddFile)
 file(GLOB_RECURSE WWW_SRCS "www/*")
 
 # Embed WWW sources.
-foreach(FILE ${WWW_SRCS})
-	add_file(${FILE} SRCS)
+foreach(WWW_FILE ${WWW_SRCS})
+	add_source_file(${WWW_FILE} SRCS)
+endforeach()
+
+file(GLOB_RECURSE SSL_SRCS "ssl/*")
+
+# Embed SSL sources and add runtime compilation hooks.
+foreach(SSL_FILE ${SSL_SRCS})
+	add_header_file(${SSL_FILE} SRCS)
 endforeach()
 
 include(GetGitRevisionDescription)
 get_git_head_revision(GIT_REFSPEC GIT_SHA1)
 
+set(OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/CMakeFiles/${PROJECT_NAME}.dir/${XXD}") 
+
 add_executable(${PROJECT_NAME} ${SRCS})
 target_include_directories(${PROJECT_NAME} PRIVATE include)
+target_include_directories(${PROJECT_NAME} PRIVATE ${OUTPUT_DIRECTORY})
 target_compile_definitions(${PROJECT_NAME} PUBLIC GIT_SHA1="${GIT_SHA1}")
 target_link_libraries(${PROJECT_NAME} ${Thread_LIBRARIES} ${MHD_LIBRARIES})
 

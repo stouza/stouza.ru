@@ -1,4 +1,5 @@
 #include "index.h"
+#include "sslkeys.h"
 
 #include <cmath>
 #include <cstdio>
@@ -21,6 +22,9 @@ using namespace std;
 // Container for embedded content that shall be
 // loaded and persist in memory during the server lifetime.
 unique_ptr<map<string, vector<unsigned char>*> > www_data;
+
+// Container for embedded content MIME.
+unique_ptr<map<string, string> > www_data_mime;
 
 static Index indexPage;
 
@@ -91,7 +95,7 @@ static int result_404(struct MHD_Connection* connection)
 	return ret;
 }
 
-static bool getFile(const char* filename, string& result)
+static bool getFile(const char* filename, string& result, string& mime)
 {
 	if (!www_data) return false;
 
@@ -99,6 +103,11 @@ static bool getFile(const char* filename, string& result)
 	if (!content) return false;
 	
 	result = string(reinterpret_cast<const char*>(&(*content)[0]), content->size());
+
+	if (!www_data_mime) return true;
+
+	mime = (*www_data_mime)[filename];
+
 	return true;
 }
 
@@ -141,6 +150,7 @@ static int callback(void* cls, struct MHD_Connection* connection,
 	}
 
 	string result = "";
+	string mime = "text/html";
 
 	if (!strcmp(curl, "/"))
 	{
@@ -161,7 +171,7 @@ static int callback(void* cls, struct MHD_Connection* connection,
 			// TODO Add post actions
 		}
 	}
-	else if (!getFile(&curl[1], result))
+	else if (!getFile(&curl[1], result, mime))
 	{
 		return result_404(connection);
 	}	
@@ -169,32 +179,11 @@ static int callback(void* cls, struct MHD_Connection* connection,
     // Reset when done.
     struct MHD_Response* response = MHD_create_response_from_buffer(
     	result.size(), &result[0], MHD_RESPMEM_MUST_COPY);
+	MHD_add_response_header(response, MHD_HTTP_HEADER_CONTENT_TYPE, mime.c_str());
     int ret = MHD_queue_response(connection, MHD_HTTP_OK, response);
     MHD_destroy_response(response);
     
     return ret;
-}
-
-static int server(int port)
-{
-	struct MHD_Daemon* d = MHD_start_daemon(
-		MHD_USE_SELECT_INTERNALLY, port, NULL, NULL,
-		&callback, NULL,
-		MHD_OPTION_NOTIFY_COMPLETED, Post::finalize, NULL,
-		MHD_OPTION_CONNECTION_TIMEOUT, (unsigned int)120,
-		MHD_OPTION_END);
-
-	if (d == NULL)
-	{
-		fprintf(stderr, "Error starting server with port %d, errno = %d\n", port, errno);
-		return 1;
-	}
-
-	while (1) sleep(1);
-
-	MHD_stop_daemon(d);
-
-	return 0;
 }
 
 int main(int argc, char* argv[])
@@ -205,6 +194,44 @@ int main(int argc, char* argv[])
 		return 1;
 	}
 	
-	return server(atoi(argv[1]));
+	int port = atoi(argv[1]);
+
+	struct MHD_Daemon* daemon;
+	
+    if (port == 443)
+    {
+		static SSLKeys sslKeys;
+
+		// Use SSL.
+		daemon = MHD_start_daemon(
+			MHD_USE_SELECT_INTERNALLY | MHD_USE_SSL, port, NULL, NULL,
+			&callback, NULL,
+			MHD_OPTION_HTTPS_MEM_KEY, sslKeys.getPrivateKey().c_str(),
+			MHD_OPTION_HTTPS_MEM_CERT, sslKeys.getCertificate().c_str(),
+			MHD_OPTION_NOTIFY_COMPLETED, Post::finalize, NULL,
+			MHD_OPTION_CONNECTION_TIMEOUT, (unsigned int)120,
+			MHD_OPTION_END);
+	}
+	else
+	{
+		daemon = MHD_start_daemon(
+			MHD_USE_SELECT_INTERNALLY, port, NULL, NULL,
+			&callback, NULL,
+			MHD_OPTION_NOTIFY_COMPLETED, Post::finalize, NULL,
+			MHD_OPTION_CONNECTION_TIMEOUT, (unsigned int)120,
+			MHD_OPTION_END);
+	}	
+	
+	if (daemon == NULL)
+	{
+		fprintf(stderr, "Error starting server with port %d, errno = %d\n", port, errno);
+		return 1;
+	}
+
+	while (1) sleep(1);
+
+	MHD_stop_daemon(daemon);
+
+	return 0;
 }
 

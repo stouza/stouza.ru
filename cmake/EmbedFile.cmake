@@ -5,6 +5,8 @@ file(READ ${FILE_HEX} CONTENT_HEX)
 
 string(SHA256 FILE_NAME_HASH ${FILE_NAME})
 
+execute_process(COMMAND xdg-mime query filetype ${FILE_PATH} OUTPUT_VARIABLE FILE_MIME)
+
 # Substitute encoded HEX content into template source file
-configure_file("${CMAKE_CURRENT_INCLUDE_DIR}/www.in" ${FILE_PATH})
+configure_file("${CMAKE_CURRENT_INCLUDE_DIR}/www.in" ${EMBED_FILE_PATH})
 
