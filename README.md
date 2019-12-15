@@ -1,3 +1,5 @@
+Please see our public project presentation [here](https://github.com/stouza/stouza-presentation).
+
 Development of landing site for stouza.ru / ястоюза.рф
 
 ## Prerequisites
