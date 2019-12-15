@@ -462,19 +462,19 @@
               <picture>
     <source media="(max-width:799px)" srcset="https://lh3.googleusercontent.com/YyYaEKZ3ilu6LoMPn3qdN2lmr41cg5mydSJVJMqavw44ArkWJbKwYduSowo9Em8MzF38tW78LTYrzslan2dhGB_QtTIXvPrck8QTuJQ=w370 1x, https://lh3.googleusercontent.com/YyYaEKZ3ilu6LoMPn3qdN2lmr41cg5mydSJVJMqavw44ArkWJbKwYduSowo9Em8MzF38tW78LTYrzslan2dhGB_QtTIXvPrck8QTuJQ=w740 2x" >
 
-    <source media="(max-width: 1439px) and (min-width: 800px)" srcset="https://lh3.googleusercontent.com/YyYaEKZ3ilu6LoMPn3qdN2lmr41cg5mydSJVJMqavw44ArkWJbKwYduSowo9Em8MzF38tW78LTYrzslan2dhGB_QtTIXvPrck8QTuJQ=w790 1x, https://lh3.googleusercontent.com/YyYaEKZ3ilu6LoMPn3qdN2lmr41cg5mydSJVJMqavw44ArkWJbKwYduSowo9Em8MzF38tW78LTYrzslan2dhGB_QtTIXvPrck8QTuJQ=w1580 2x">
+    <source media="(max-width: 1439px) and (min-width: 800px)" srcset="volkov-rocket_790.png 1x, volkov-rocket_1422.png 2x">
 
-  <img src="https://lh3.googleusercontent.com/YyYaEKZ3ilu6LoMPn3qdN2lmr41cg5mydSJVJMqavw44ArkWJbKwYduSowo9Em8MzF38tW78LTYrzslan2dhGB_QtTIXvPrck8QTuJQ=w0" class="content__poster-image" alt="">
+  <img src="volkov-rocket_1422.png" class="content__poster-image" alt="">
   </picture>
               </div>
 
               <div class="content__image">
               <picture>
-    <source media="(max-width:379px)" srcset="https://lh3.googleusercontent.com/ChKTbZh_KpXSif57SrQHniYX_18jSKul19VPBJn5siZ9QnsSvKj8h3h33DQzWaxwvxK2XbYP5J2ibLcLEyRmnfMOXFp3KgnusKd1Rmk=w350 1x, https://lh3.googleusercontent.com/ChKTbZh_KpXSif57SrQHniYX_18jSKul19VPBJn5siZ9QnsSvKj8h3h33DQzWaxwvxK2XbYP5J2ibLcLEyRmnfMOXFp3KgnusKd1Rmk=w700 2x" >
+    <source media="(max-width:379px)" srcset="volkov-rocket_790.png 1x, volkov-rocket_790.png 2x" >
 
-    <source media="(max-width: 800px) and (min-width: 380px)" srcset="https://lh3.googleusercontent.com/ChKTbZh_KpXSif57SrQHniYX_18jSKul19VPBJn5siZ9QnsSvKj8h3h33DQzWaxwvxK2XbYP5J2ibLcLEyRmnfMOXFp3KgnusKd1Rmk=w400 1x, https://lh3.googleusercontent.com/ChKTbZh_KpXSif57SrQHniYX_18jSKul19VPBJn5siZ9QnsSvKj8h3h33DQzWaxwvxK2XbYP5J2ibLcLEyRmnfMOXFp3KgnusKd1Rmk=w800 2x">
+    <source media="(max-width: 800px) and (min-width: 380px)" srcset="volkov-rocket_790.png 1x, volkov-rocket_790.png 2x">
 
-  <img src="https://lh3.googleusercontent.com/ChKTbZh_KpXSif57SrQHniYX_18jSKul19VPBJn5siZ9QnsSvKj8h3h33DQzWaxwvxK2XbYP5J2ibLcLEyRmnfMOXFp3KgnusKd1Rmk=w0" class="slide-image" alt="">
+  <img src="volkov-rocket_790.png" class="slide-image" alt="">
   </picture>
                 <img src="shadow.png" class="slide-image-shadow">
               </div>
