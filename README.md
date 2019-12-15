@@ -11,6 +11,7 @@ sudo apt install git g++ cmake libmicrohttpd-dev certbot
 Clone the sources:
 
 ```
+git clone https://github.com/stouza/stouza.ru.git
 ```
 
 Create SSL certificates:
