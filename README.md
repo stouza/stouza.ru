@@ -2,6 +2,8 @@ Please see our public project presentation [here](https://github.com/stouza/stou
 
 Development of landing site for stouza.ru / ястоюза.рф
 
+<img src="screenshot.png" />
+
 ## Prerequisites
 
 ```
